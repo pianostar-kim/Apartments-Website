@@ -1,0 +1,128 @@
+body, #main-content h2 {
+    margin: 0;
+}
+
+#mobile-header, #footer {
+    display: flex;
+}
+
+#mobile-header {
+    background-color: orange;
+    padding: 5px 10% 5px 10%;
+    flex-direction: horizontal;
+    justify-content: space-between;
+}
+
+#menu-icon {
+    width: 25px;
+}
+
+#desktop-header {
+    background-color: pink;
+    padding: 5px 5% 5px 5%;
+    display: none;
+}
+
+#main-content {
+    padding: 20px 10% 20px 10%;
+    background-color: violet;
+}
+
+#footer {
+    flex-direction: column;
+    background-color: aqua;
+    padding: 0 10% 0 10%;
+}
+
+.review-box {
+    border: solid;
+    border-color: pink;
+    padding: 10px;
+}
+
+.review-header {
+    width: 100%;
+    display: flex;
+    flex-direction: horizontal;
+}
+
+.reviewer-name, .date {
+    width: 50%;
+}
+
+.date {
+    text-align: right;
+}
+
+.review-box p {
+    margin-bottom: 0;
+}
+
+.star {
+    color: yellow;
+}
+
+@media (min-width: 496px) {
+    #mobile-header {
+        padding: 5px 15% 5px 15%;
+    }
+
+    #main-content {
+        padding: 20px 15% 20px 15%;
+    }
+    
+    #footer {
+        padding: 0 15% 0 15%;
+    }
+}
+
+/* Min width for laptop/desktop view. */
+@media (min-width: 728px) {
+    #mobile-header {
+        display: none;
+    }
+
+    #desktop-header {
+        display: flex;
+        flex-direction: horizontal;
+        justify-content: space-between;
+    }
+
+    #main-content {
+        padding: 20px 15% 20px 15%;
+    }
+    
+    #footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 5% 0 5%;
+    }
+}
+
+@media (min-width: 1032px) {
+    #desktop-header {
+        padding: 5px 10% 5px 10%;
+    }
+
+    #main-content {
+        padding: 20px 20% 20px 20%;
+    }
+
+    #footer {
+        padding: 0 10% 0 10%;
+    }
+}
+
+@media (min-width: 1400px) {
+    #desktop-header {
+        padding: 5px 15% 5px 15%;
+    }
+
+    #main-content {
+        padding: 20px 25% 20px 25%;
+    }
+
+    #footer {
+        padding: 0 15% 0 15%;
+    }
+}

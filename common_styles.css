@@ -1,0 +1,173 @@
+/* These are styles that are common to all webpages of the apartment website. */
+
+@keyframes darken {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lighten {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideIntoView {
+    0% {
+        right: -275px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes slideOutOfView {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -275px;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+#mobile-header, #footer {
+    display: flex;
+}
+
+#mobile-header {
+    background-color: orange;
+    padding: 5px 10% 5px 10%;
+    flex-direction: horizontal;
+    justify-content: space-between;
+}
+
+#mobile-navigation {
+    /* visibility: hidden; */
+    background-color: violet;
+    position: fixed;
+    z-index: 1;
+    width: 250px;
+    height: 100vh;
+    padding: 25px 25px 0 0;
+    top: 0;
+    right: -275px; /* previously 0 */
+}
+
+#mobile-navigation table {
+    width: 100%;
+    text-align: right;
+}
+
+#mobile-navigation-closer {
+    width: 25px;
+}
+
+#mobile-navigation-closer:hover {
+    cursor: pointer;
+}
+
+#mobile-navigation.active {
+    /* visibility: visible; */
+    animation: 1s linear slideIntoView forwards;
+}
+
+#mobile-navigation.inactive {
+    animation: 1s linear slideOutOfView forwards;
+}
+
+#darkener {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background-color: rgb(0, 0, 0, 0.75);
+    pointer-events: none;
+}
+
+#darkener.active {
+    animation: 1s linear darken forwards;
+    pointer-events: all;
+}
+
+#darkener.inactive {
+    animation: 1s linear lighten forwards;
+    pointer-events: none;
+}
+
+#menu-icon {
+    width: 25px;
+}
+
+#menu-icon:hover {
+    cursor: pointer;
+}
+
+#desktop-header {
+    background-color: pink;
+    padding: 5px 5% 5px 5%;
+    display: none;
+}
+
+#footer {
+    flex-direction: column;
+    background-color: aqua;
+    padding: 0 10% 0 10%;
+}
+
+@media (min-width: 496px) {
+    #mobile-header {
+        padding: 5px 15% 5px 15%;
+    }
+    
+    #footer {
+        padding: 0 15% 0 15%;
+    }
+}
+
+@media (min-width: 728px) {
+    #mobile-header {
+        display: none;
+    }
+
+    #desktop-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 5% 0 5%;
+    }
+}
+
+@media (min-width: 1032px) {
+    #desktop-header {
+        padding: 5px 10% 5px 10%;
+    }
+
+    #footer {
+        padding: 0 10% 0 10%;
+    }
+}
+
+@media (min-width: 1400px) {
+    #desktop-header {
+        padding: 5px 15% 5px 15%;
+    }
+
+    #footer {
+        padding: 0 15% 0 15%;
+    }
+}

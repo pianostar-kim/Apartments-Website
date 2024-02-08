@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="common_styles.css">
+        <link rel="stylesheet" href="contact_us_styles.css">
+        <script src="mobile_navigator_manipulation.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <div id="darkener" onClick="closeMobileNavigator()"></div>
+        <div id="mobile-header">
+            <h2>LOGO HERE</h2>
+            <img id="menu-icon" src="menu-svgrepo-com.svg" onClick="openMobileNavigator()">
+        </div>
+        <div id="mobile-navigation">
+            <table>
+                <tr><td><img id="mobile-navigation-closer" src="x-symbol-svgrepo-com.svg" onClick="closeMobileNavigator()"></td></tr>
+                <tr><td>Floor Plans</td></tr>
+                <tr><td>Amenities</td></tr>
+                <tr><td>Gallery</td></tr>
+                <tr><td>Reviews</td></tr>
+                <tr><td>Contact Us</td></tr>
+            </table>
+        </div>
+        <div id="desktop-header">
+            <h2>LOGO HERE</h2>
+            <table>
+                <tr>
+                    <td>Floor Plans</td>
+                    <td>Amenities</td>
+                    <td>Gallery</td>
+                    <td>Reviews</td>
+                    <td>Contact Us</td>
+                </tr>
+            </table>
+        </div>
+        <div id="main-content">
+            <h2>Contact Us</h2>
+            <p><i>Note: All fields are mandatory to complete.</i></p>
+            <p class="prompt">First Name</p>
+            <input />
+            <p class="prompt">Last Name</p>
+            <input />
+            <p class="prompt">Email Address</p>
+            <input />
+            <p class="prompt">Message</p>
+            <input id="message-input"/>
+            <br />
+            <br />
+            <div id="button-placeholder">
+                <button>Submit</button>
+            </div>
+        </div>
+        <div id="footer">
+            <p><b>Location</b><br />16 Boris Avenue<br />Tucson, Arizona 85701</p>
+            <p><b>Office Hours</b><br />Mon. - Fri.: 9 AM - 6 PM<br />Sat.: 9 AM - 5 PM<br />Sun.: 11 AM - 5 PM</p>
+            <p><b>Contact Information</b><br />Email: leasing@mountainsidesquare.com<br />Phone: (988) 001-4554</p>
+        </div>
+    </body>
+</html>

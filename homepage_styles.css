@@ -1,0 +1,93 @@
+#eyecatcher-section, #amenities-section, #floor-plans-section, #reviews-section {
+    border-bottom: solid;
+    padding: 20px 10% 20px 10%;
+}
+
+#eyecatcher-section h2, #eyecatcher-section p {
+    text-align: center;
+}
+
+#eyecatcher-section h2, #reviews-section h2, #floor-plans-section h2, #amenities-section h2 {
+    margin-top: 0;
+}
+
+#eyecatcher-section p, #reviews-section p, #amenities-section p {
+    margin: 0;
+}
+
+.sample-review {
+    border: solid;
+    border-color: purple;
+    padding: 10px;
+}
+
+#sample-floor-plan-info-box-container {
+    height: 840px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sample-floor-plan-info-box {
+    border: solid;
+    border-color: aqua;
+    text-align: center;
+    width: max-content;
+}
+
+.floor-plan-image {
+    width: 200px;
+}
+
+.sample-floor-plan-info-box h2, .sample-floor-plan-info-box p {
+    margin: 0;
+}
+
+@media (min-width: 496px) {
+    #eyecatcher-section, #amenities-section, #floor-plans-section, #reviews-section {
+        padding: 20px 15% 20px 15%;
+    }
+}
+
+@media (min-width: 728px) {
+    #eyecatcher-section {
+        padding: 50px 15% 50px 15%;
+    }
+
+    #amenities-section, #floor-plans-section, #reviews-section {
+        padding: 20px 15% 20px 15%;
+    }
+}
+
+@media (min-width: 1032px) {
+    #eyecatcher-section {
+        padding: 50px 20% 50px 20%;
+    }
+
+    #amenities-section, #floor-plans-section, #reviews-section {
+        padding: 20px 20% 20px 20%;
+    }
+
+    #sample-floor-plan-info-box-container {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* #desktop-header {
+        padding: 5px 15% 5px 15%;
+    } */
+
+    #eyecatcher-section {
+        padding: 50px 25% 50px 25%;
+    }
+
+    #amenities-section, #reviews-section {
+        padding: 20px 25% 20px 25%;
+    }
+
+    /* #footer {
+        padding: 0 15% 0 15%;
+    } */
+}

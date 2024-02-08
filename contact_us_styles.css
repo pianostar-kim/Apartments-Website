@@ -1,0 +1,50 @@
+#main-content h2 {
+    margin: 0;
+}
+
+#main-content {
+    padding: 20px 10% 20px 10%;
+    background-color: violet;
+}
+
+#button-placeholder {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.prompt {
+    margin-bottom: 0;
+}
+
+input {
+    width: 100%;
+}
+
+#message-input {
+    height: 140px;
+}
+
+@media (min-width: 496px) {
+    #main-content {
+        padding: 20px 15% 20px 15%;
+    }
+}
+
+@media (min-width: 728px) {
+    #main-content {
+        padding: 20px 25% 20px 25%;
+    }
+}
+
+@media (min-width: 1032px) {
+    #main-content {
+        padding: 20px 30% 20px 30%;
+    }
+}
+
+@media (min-width: 1400px) {
+    #main-content {
+        padding: 20px 35% 20px 35%;
+    }
+}
