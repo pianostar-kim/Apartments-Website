@@ -21,19 +21,66 @@
     padding: 10px;
 }
 
+#secondary-body-for-floor-plans {
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    background: lightblue;
+}
+
 #sample-floor-plan-info-box-container {
-    height: 840px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: plum;
+}
+
+#radio1, #radio2, #radio3 {
+    display: none;
+}
+
+#sample-floor-plan-info-box-navigation {
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+    background: lightgreen;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: gold;
+}
+
+.dot:hover {
+    cursor: pointer;
 }
 
 .sample-floor-plan-info-box {
-    border: solid;
-    border-color: aqua;
     text-align: center;
     width: max-content;
+    position: absolute;
+    z-index: -1;
+}
+
+#radio1:checked ~ #box1,
+#radio2:checked ~ #box2,
+#radio3:checked ~ #box3 {
+    z-index: 99;
+}
+
+#radio1:checked ~ #sample-floor-plan-info-box-navigation #dot1,
+#radio2:checked ~ #sample-floor-plan-info-box-navigation #dot2,
+#radio3:checked ~ #sample-floor-plan-info-box-navigation #dot3 {
+    background: white;
 }
 
 .floor-plan-image {
@@ -68,26 +115,14 @@
     #amenities-section, #floor-plans-section, #reviews-section {
         padding: 20px 20% 20px 20%;
     }
-
-    #sample-floor-plan-info-box-container {
-        flex-direction: row;
-    }
 }
 
 @media (min-width: 1400px) {
-    /* #desktop-header {
-        padding: 5px 15% 5px 15%;
-    } */
-
     #eyecatcher-section {
         padding: 50px 25% 50px 25%;
     }
 
-    #amenities-section, #reviews-section {
+    #amenities-section, #floor-plans-section, #reviews-section {
         padding: 20px 25% 20px 25%;
     }
-
-    /* #footer {
-        padding: 0 15% 0 15%;
-    } */
 }
