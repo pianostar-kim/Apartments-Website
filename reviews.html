@@ -1,25 +1,34 @@
 <html>
     <head>
         <title>Reviews</title>
+        <link rel="stylesheet" href="common_styles.css">
         <link rel="stylesheet" href="reviews_styles.css">
+        <script src="mobile_navigator_manipulation.js"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
+        <div id="darkener" onClick="closeMobileNavigator()"></div>
         <div id="mobile-header">
             <h2>LOGO HERE</h2>
-            <img id="menu-icon" src="menu-svgrepo-com.svg">
+            <img id="menu-icon" src="menu-svgrepo-com.svg" onClick="openMobileNavigator()">
+        </div>
+        <div id="mobile-navigation">
+            <table>
+                <tr><td><img id="mobile-navigation-closer" src="x-symbol-svgrepo-com.svg" onClick="closeMobileNavigator()"></td></tr>
+                <tr class="link-row"><td><a href="floor_plans.html" class="mobile-navigation-link">Floor Plans</a></td></tr>
+                <tr class="link-row"><td><a href="amenities.html" class="mobile-navigation-link">Amenities</a></td></tr>
+                <tr class="link-row"><td><a href="reviews.html" class="mobile-navigation-link">Reviews</a></td></tr>
+                <tr class="link-row"><td><a href="contactus.html" class="mobile-navigation-link">Contact Us</a></td></tr>
+            </table>
         </div>
         <div id="desktop-header">
             <h2>LOGO HERE</h2>
-            <table>
-                <tr>
-                    <td>Floor Plans</td>
-                    <td>Amenities</td>
-                    <td>Gallery</td>
-                    <td>Reviews</td>
-                    <td>Contact Us</td>
-                </tr>
-            </table>
+            <div id="desktop-header-navigation">
+                <a href="floor_plans.html"><div>Floor Plans</div></a>
+                <a href="amenities.html"><div>Amenities</div></a>
+                <a href="reviews.html"><div>Reviews</div></a>
+                <a href="contactus.html"><div>Contact Us</div></a>
+            </div>
         </div>
         <div id="main-content">
             <h2>Reviews</h2>

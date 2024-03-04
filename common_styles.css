@@ -52,15 +52,14 @@ body {
 }
 
 #mobile-navigation {
-    /* visibility: hidden; */
     background-color: violet;
     position: fixed;
-    z-index: 1;
+    z-index: 101;
     width: 250px;
     height: 100vh;
     padding: 25px 25px 0 0;
     top: 0;
-    right: -275px; /* previously 0 */
+    right: -275px;
 }
 
 #mobile-navigation table {
@@ -76,8 +75,15 @@ body {
     cursor: pointer;
 }
 
+.link-row {
+    height: 50px;
+}
+
+.mobile-navigation-link {
+    font-size: 25px;
+}
+
 #mobile-navigation.active {
-    /* visibility: visible; */
     animation: 1s linear slideIntoView forwards;
 }
 
@@ -92,6 +98,7 @@ body {
     opacity: 0;
     background-color: rgb(0, 0, 0, 0.75);
     pointer-events: none;
+    z-index: 100;
 }
 
 #darkener.active {
@@ -114,8 +121,29 @@ body {
 
 #desktop-header {
     background-color: pink;
-    padding: 5px 5% 5px 5%;
+    padding: 0 5% 0 5%;
     display: none;
+}
+
+#desktop-header-navigation {
+    display: flex;
+    flex-direction: horizontal;
+}
+
+#desktop-header-navigation a {
+    width: 100px;
+}
+
+#desktop-header-navigation a div {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#desktop-header-navigation a:hover {
+    background-color: aquamarine;
 }
 
 #footer {
@@ -154,7 +182,7 @@ body {
 
 @media (min-width: 1032px) {
     #desktop-header {
-        padding: 5px 10% 5px 10%;
+        padding: 0 10% 0 10%;
     }
 
     #footer {
@@ -164,7 +192,7 @@ body {
 
 @media (min-width: 1400px) {
     #desktop-header {
-        padding: 5px 15% 5px 15%;
+        padding: 0 15% 0 15%;
     }
 
     #footer {
