@@ -1,16 +1,23 @@
 #main-content h2 {
     margin: 0;
+    font-family: "Gabarito", sans-serif;
+}
+
+#main-content > p {
+    font-family: "EB Garamond", serif;
 }
 
 #main-content {
     padding: 20px 10% 20px 10%;
-    background-color: violet;
+    background-color: #FFFEC2;
 }
 
 .review-box {
-    border: solid;
-    border-color: pink;
+    background-color: white;
     padding: 10px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    
 }
 
 .review-header {
@@ -21,6 +28,7 @@
 
 .reviewer-name, .date {
     width: 50%;
+    font-family: "EB Garamond", serif;
 }
 
 .date {
@@ -29,10 +37,11 @@
 
 .review-box p {
     margin-bottom: 0;
+    font-family: "EB Garamond", serif;
 }
 
 .star {
-    color: yellow;
+    color: #FFB600;
 }
 
 @media (min-width: 496px) {

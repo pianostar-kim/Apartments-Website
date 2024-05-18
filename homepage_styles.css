@@ -1,5 +1,9 @@
-#eyecatcher-section, #amenities-section, #floor-plans-section, #reviews-section {
+#eyecatcher-section {
     border-bottom: solid;
+    padding: 20px 10% 20px 10%;
+}
+
+#reviews-section, #amenities-section, #floor-plans-section {
     padding: 20px 10% 20px 10%;
 }
 
@@ -11,21 +15,34 @@
     margin-top: 0;
 }
 
-#eyecatcher-section p, #reviews-section p, #amenities-section p {
+#eyecatcher-section h2, #amenities-section h2, #amenities-section h3, #reviews-section h2, #floor-plans-section h2 {
+    font-family: "Gabarito", sans-serif;
+}
+
+#eyecatcher-section p, #amenities-section p, #amenities-section ul, #reviews-section p, .sample-review, #floor-plans-section p {
+    font-family: "EB Garamond", serif;
+}
+
+#eyecatcher-section p, #reviews-section p, #amenities-section p, #floor-plans-section p {
     margin: 0;
 }
 
+#reviews-section a, #amenities-section a, #floor-plans-section a {
+    font-family: "EB Garamond", serif;
+    color: green;
+}
+
 .sample-review {
-    border: solid;
-    border-color: purple;
+    background-color: white;
     padding: 10px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 #secondary-body-for-floor-plans {
     width: 100%;
     height: max-content;
     margin: 0;
-    background: lightblue;
 }
 
 #sample-floor-plan-info-box-container {
@@ -34,7 +51,6 @@
     position: relative;
     width: 200px;
     height: 300px;
-    background: plum;
 }
 
 #radio1, #radio2, #radio3 {
@@ -48,7 +64,6 @@
     position: absolute;
     text-align: center;
     z-index: 99;
-    background: lightgreen;
 }
 
 .dot {
@@ -57,7 +72,7 @@
     position: relative;
     border-radius: 50%;
     display: inline-block;
-    background: gold;
+    background-color: gray;
 }
 
 .dot:hover {
@@ -65,6 +80,7 @@
 }
 
 .sample-floor-plan-info-box {
+    background-color: #FFFEC2;
     text-align: center;
     width: max-content;
     position: absolute;
@@ -80,7 +96,7 @@
 #radio1:checked ~ #sample-floor-plan-info-box-navigation #dot1,
 #radio2:checked ~ #sample-floor-plan-info-box-navigation #dot2,
 #radio3:checked ~ #sample-floor-plan-info-box-navigation #dot3 {
-    background: white;
+    background-color: white;
 }
 
 .floor-plan-image {
@@ -89,6 +105,18 @@
 
 .sample-floor-plan-info-box h2, .sample-floor-plan-info-box p {
     margin: 0;
+}
+
+#reviews-section {
+    background: linear-gradient(#6FD6FA, #FFFEC2);
+}
+
+#amenities-section {
+    background: linear-gradient(#D9BAFF, #FFA6A6);
+}
+
+#floor-plans-section {
+    background: linear-gradient(#FFA6A6, #6FD6FA);
 }
 
 @media (min-width: 496px) {

@@ -3,31 +3,41 @@
         <title>Amenities</title>
         <link rel="stylesheet" href="common_styles.css">
         <link rel="stylesheet" href="amenities_styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
         <script src="mobile_navigator_manipulation.js"></script>
+        <script src="https://kit.fontawesome.com/3bfd3ce9e5.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <div id="darkener" onClick="closeMobileNavigator()"></div>
         <div id="mobile-header">
-            <h2>LOGO HERE</h2>
-            <img id="menu-icon" src="menu-svgrepo-com.svg" onClick="openMobileNavigator()">
+            <a href="index.html"><img class="logo" src="Rosemary Place Logo 3.png"></a>
+            <i class="fa-solid fa-bars" id="menu-icon" onClick="openMobileNavigator()"></i>
         </div>
         <div id="mobile-navigation">
-            <table>
-                <tr><td><img id="mobile-navigation-closer" src="x-symbol-svgrepo-com.svg" onClick="closeMobileNavigator()"></td></tr>
-                <tr class="link-row"><td><a href="floor_plans.html" class="mobile-navigation-link">Floor Plans</a></td></tr>
-                <tr class="link-row"><td><a href="amenities.html" class="mobile-navigation-link">Amenities</a></td></tr>
-                <tr class="link-row"><td><a href="reviews.html" class="mobile-navigation-link">Reviews</a></td></tr>
-                <tr class="link-row"><td><a href="contactus.html" class="mobile-navigation-link">Contact Us</a></td></tr>
-            </table>
+            <i class="fa-solid fa-xmark" id="mobile-navigation-closer" onClick="closeMobileNavigator()"></i>
+            <br />
+            <br />
+            <a href="floor_plans.html"><button>Floor Plans</button></a>
+            <br />
+            <br />
+            <a href="amenities.html"><button>Amenities</button></a>
+            <br />
+            <br />
+            <a href="reviews.html"><button>Reviews</button></a>
+            <br />
+            <br />
+            <a href="contactus.html"><button>Contact Us</button></a>
         </div>
         <div id="desktop-header">
-            <h2>LOGO HERE</h2>
+            <a href="index.html"><img class="logo" src="Rosemary Place Logo 3.png"></a>
             <div id="desktop-header-navigation">
-                <a href="floor_plans.html"><div>Floor Plans</div></a>
-                <a href="amenities.html"><div>Amenities</div></a>
-                <a href="reviews.html"><div>Reviews</div></a>
-                <a href="contactus.html"><div>Contact Us</div></a>
+                <a href="floor_plans.html"><button>Floor Plans</button></a>
+                <a href="amenities.html"><button>Amenities</button></a>
+                <a href="reviews.html"><button>Reviews</button></a>
+                <a href="contactus.html"><button>Contact Us</button></a>
             </div>
         </div>
         <div id="main-content">

@@ -40,19 +40,24 @@ body {
     margin: 0;
 }
 
-#mobile-header, #footer {
+#mobile-header, #desktop-header, #footer {
     display: flex;
+    background-color: #6EDE4D;
 }
 
 #mobile-header {
-    background-color: orange;
     padding: 5px 10% 5px 10%;
     flex-direction: horizontal;
     justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 76px;
 }
 
 #mobile-navigation {
-    background-color: violet;
+    background-color: pink;
     position: fixed;
     z-index: 101;
     width: 250px;
@@ -60,35 +65,40 @@ body {
     padding: 25px 25px 0 0;
     top: 0;
     right: -275px;
-}
-
-#mobile-navigation table {
-    width: 100%;
     text-align: right;
 }
 
+#mobile-navigation button {
+    font-family: "Gabarito", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    transition: color 0.25s
+}
+
+#mobile-navigation button:hover {
+    cursor: pointer;
+    color: #FFFEC2;
+}
+
 #mobile-navigation-closer {
-    width: 25px;
+    font-size: 24px;
+    color: black;
+    transition: color 0.25s;
 }
 
 #mobile-navigation-closer:hover {
     cursor: pointer;
-}
-
-.link-row {
-    height: 50px;
-}
-
-.mobile-navigation-link {
-    font-size: 25px;
+    color: #FFFEC2;
 }
 
 #mobile-navigation.active {
-    animation: 1s linear slideIntoView forwards;
+    animation: 0.25s ease-in-out slideIntoView forwards;
 }
 
 #mobile-navigation.inactive {
-    animation: 1s linear slideOutOfView forwards;
+    animation: 0.25s ease-in-out slideOutOfView forwards;
 }
 
 #darkener {
@@ -102,25 +112,27 @@ body {
 }
 
 #darkener.active {
-    animation: 1s linear darken forwards;
+    animation: 0.25s linear darken forwards;
     pointer-events: all;
 }
 
 #darkener.inactive {
-    animation: 1s linear lighten forwards;
+    animation: 0.25s linear lighten forwards;
     pointer-events: none;
 }
 
 #menu-icon {
-    width: 25px;
+    font-size: 24px;
+    color: black;
+    transition: color 0.25s;
 }
 
 #menu-icon:hover {
     cursor: pointer;
+    color: #FFFEC2;
 }
 
 #desktop-header {
-    background-color: pink;
     padding: 0 5% 0 5%;
     display: none;
 }
@@ -134,22 +146,24 @@ body {
     width: 100px;
 }
 
-#desktop-header-navigation a div {
+#desktop-header-navigation a button {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    font-family: "Gabarito", sans-serif;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.25s;
 }
 
-#desktop-header-navigation a:hover {
-    background-color: aquamarine;
+#desktop-header-navigation a button:hover {
+    cursor: pointer;
+    background-color: pink;
 }
 
 #footer {
     flex-direction: column;
-    background-color: aqua;
-    padding: 0 10% 0 10%;
+    padding: 0 10%;
+    font-family: "EB Garamond", serif;
 }
 
 @media (min-width: 496px) {
