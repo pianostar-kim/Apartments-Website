@@ -1,0 +1,264 @@
+/* This css file contains styles that are common to all webpages of the apartment website. */
+
+/* Essential animations */
+
+@keyframes darken {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lighten {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideIntoView {
+    0% {
+        right: -275px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes slideOutOfView {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -275px;
+    }
+}
+
+:root {
+    --light-green: #6EDE4D;
+    --cream: #FFFEC2;
+    --transparent-black: rgb(0, 0, 0, 0.75);
+}
+
+body {
+    margin: 0;
+}
+
+.logo {
+    height: 76px;
+}
+
+/* Styles for mobile header and other related elements */
+
+#mobile-header {
+    display: flex;
+    background-color: var(--light-green);
+    padding: 5px 10%;
+    flex-direction: horizontal;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mobile-navigation, #darkener {
+    position: fixed;
+    height: 100vh;
+}
+
+#mobile-navigation {
+    background-color: pink;
+    z-index: 2;
+    width: 250px;
+    padding: 25px 25px 0 0;
+    top: 0;
+    right: -275px;
+    text-align: right;
+}
+
+#mobile-navigation button, #mobile-navigation-closer, #menu-icon {
+    font-size: 24px;
+    color: black;
+    transition: color 0.25s;
+}
+
+#mobile-navigation button {
+    font-family: "Gabarito", sans-serif;
+    background-color: transparent;
+    border: none;
+}
+
+#mobile-navigation button:hover, #mobile-navigation-closer:hover, #menu-icon:hover {
+    cursor: pointer;
+    color: var(--cream);
+}
+
+#mobile-navigation.active {
+    animation: 0.25s ease-in-out slideIntoView forwards;
+}
+
+#mobile-navigation.inactive {
+    animation: 0.25s ease-in-out slideOutOfView forwards;
+}
+
+#darkener, #darkener.inactive {
+    pointer-events: none;
+}
+
+#darkener {
+    width: 100vw;
+    opacity: 0;
+    background-color: var(--transparent-black);
+    z-index: 1;
+}
+
+#darkener.active {
+    animation: 0.25s linear darken forwards;
+    pointer-events: all;
+}
+
+#darkener.inactive {
+    animation: 0.25s linear lighten forwards;
+}
+
+/* Styles for desktop header and other related elements */
+
+#desktop-header, #desktop-header-navigation {
+    display: flex;
+}
+
+#desktop-header {
+    background-color: var(--light-green);
+    padding: 0 5%;
+    display: none;
+}
+
+#desktop-header-navigation {
+    flex-direction: horizontal;
+}
+
+#desktop-header-navigation a {
+    width: 100px;
+}
+
+#desktop-header-navigation a button {
+    height: 100%;
+    width: 100%;
+    font-family: "Gabarito", sans-serif;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.25s;
+}
+
+#desktop-header-navigation a button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+
+/* Styles for footer and other footer-related elements */
+
+#footer, #general-information, #miscellaneous-information, #manager-information {
+    display: flex;
+}
+
+#footer, #general-information, #manager-information {
+    flex-direction: column;
+}
+
+#footer {
+    background-color: var(--light-green);
+    padding: 25px 10%;
+    font-family: "EB Garamond", serif;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#general-information, #miscellaneous-information {
+    justify-content: space-between;
+}
+
+#general-information {
+    height: 250px;
+}
+
+#miscellaneous-information {
+    flex-direction: row;
+}
+
+#manager-information {
+    margin: 20px 0;
+    align-items: center;
+}
+
+#manager-information img {
+    height: 50px;
+}
+
+#miscellaneous-information img {
+    height: 24px;
+}
+
+@media (min-width: 496px) {
+    #mobile-header {
+        padding: 5px 15%;
+    }
+    
+    #footer {
+        padding: 25px 15%;
+    }
+}
+
+@media (min-width: 728px) {
+    #mobile-header {
+        display: none;
+    }
+
+    #desktop-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer {
+        padding: 25px 5%;
+    }
+    
+    #general-information {
+        height: fit-content;
+    }
+
+    #desktop-header, #general-information {
+        flex-direction: row;
+    }
+
+    #manager-information {
+        margin: 50px 0;
+    }
+
+    #manager-information img {
+        height: 100px;
+    }
+}
+
+@media (min-width: 1032px) {
+    #desktop-header {
+        padding: 0 10%;
+    }
+
+    #footer {
+        padding: 25px 10%;
+    }
+}
+
+@media (min-width: 1400px) {
+    #desktop-header {
+        padding: 0 15%;
+    }
+
+    #footer {
+        padding: 25px 15%;
+    }
+}
