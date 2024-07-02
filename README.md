@@ -8,4 +8,4 @@ At any given time, you may only view the files in this repository. You do not ha
 - **March 30, 2024:** Version 0.4, where the floor plans webpage and the overall structure for the desktop view of it is created.
 - **May 17, 2024:** Version 0.5, which has most of the website's styles. It also no longer uses svg files for icons, so they have been deleted from this repository.
 - **June 28, 2024:** Version 1.0, the first complete version of the website.
-- **June 28, 2024 - present:** Version 1.01, which involves revisions of file locations for correct deployment with GitHub pages.
+- **June 28, 2024 - July 1, 2024:** Version 1.01, which involves revisions of file locations for correct deployment with GitHub pages.
